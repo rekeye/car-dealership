@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Auto Komis`,
+    title: `Premium Automotive`,
     description: `Cillum laboris exercitation eu labore eu duis reprehenderit elit officia cillum reprehenderit.`,
     author: `@rekeye`,
   },
@@ -19,13 +19,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `car-dealership`,
-        short_name: `car-dealer`,
+        name: `Premium Automotive`,
+        short_name: `Premium Auto`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/car-dealer-logo.png`,
       },
     },
     `gatsby-plugin-gatsby-cloud`,
