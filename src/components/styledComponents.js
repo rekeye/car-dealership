@@ -4,7 +4,7 @@ import styled, { css } from "styled-components"
 export const StyledLink = styled(Link)`
     color: ${props => props.color ? props.color : 'var(--black)'};
     text-decoration: none;
-    ${props => (props.menu && css`
+    ${props => (props.navbar && css`
         padding: 0.75em;
         font-size: 1.2rem;
         transition: border-bottom 1s;
