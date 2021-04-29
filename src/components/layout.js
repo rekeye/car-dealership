@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import GlobalStyle from "./style"
+import GlobalStyle from "./globalStyle" //Global style component provided by styled-components (https://www.gatsbyjs.com/docs/how-to/styling/styled-components/#creating-global-styles)
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
