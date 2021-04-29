@@ -6,13 +6,17 @@ import { StyledLink } from "./styledComponents"
 
 const HeaderDiv = styled.div`
   background: var(--base-dark-red);
-  padding: 2em 4em;
+  padding: 1.5em;
+  @media (min-width: 768px) {
+    padding: 2em 4em;
+  }
   ${props => (props.subheader && css`
     background: transparent;
-    padding: 1em 4em;
+    padding: 1em 1.5em;
     display: flex;
     flex-direction: column;
     @media (min-width: 768px) {
+    padding: 1em 4em;
       flex-direction: row;
       justify-content: flex-end;
     }
@@ -20,7 +24,7 @@ const HeaderDiv = styled.div`
 `
 const SiteTitle = styled.h1`
   font-weight: 300;
-  font-size: max(4vw - 1.75rem, 2rem);
+  font-size: max(4vw - 1.75rem, 1.9rem);
 `
 const Hamburger = styled.button`
   align-self: flex-end;
