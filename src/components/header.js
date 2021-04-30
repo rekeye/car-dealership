@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 
+import { useScrollPosition } from '../hooks/useScrollPosition'
+
 import styled, { css } from "styled-components"
 import { StyledLink } from "./styledComponents"
 
@@ -10,7 +12,8 @@ const HeaderDiv = styled.div`
   @media (min-width: 768px) {
     padding: 2em 4em;
   }
-  ${props => (props.subheader && css`
+  ${({navcontainer}) => (navcontainer && css`
+    width: 100%;
     background: transparent;
     padding: 1em 1.5em;
     display: flex;
@@ -21,6 +24,11 @@ const HeaderDiv = styled.div`
       justify-content: flex-end;
     }
   `)}
+  ${({sticky}) => sticky && css`
+    position: fixed;
+    top: 0;
+    right: 0;
+  `}
 `
 const SiteTitle = styled.h1`
   font-weight: 300;
@@ -79,6 +87,13 @@ const Navbar = styled.nav`
 
 const Header = ({ siteTitle }) => {
   const [ nav, setNav ] = useState(false);
+  const [ scroll, setScroll ] = useState(0);
+
+  console.log(scroll)
+
+  useScrollPosition( function setScrollPosition({curPosition}) {
+    setScroll( curPosition.y )
+  })
 
   return (
     <header>
@@ -89,7 +104,7 @@ const Header = ({ siteTitle }) => {
           </StyledLink>
         </SiteTitle>
       </HeaderDiv>
-      <HeaderDiv subheader>
+      <HeaderDiv navcontainer sticky={( scroll<=-120 )}>
         <Hamburger open={nav} onClick={() => setNav( !nav )}>
           <div/>
           <div/>
