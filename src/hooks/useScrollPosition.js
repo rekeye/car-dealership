@@ -23,5 +23,5 @@ export const useScrollPosition = ( effect, deps, el, useWindow, wait ) => {
         window.addEventListener( 'scroll', scrollHandler )
 
         return () => window.removeEventListener( 'scroll', scrollHandler )
-    })
+    }, deps)
 }
