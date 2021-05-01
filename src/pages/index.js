@@ -35,9 +35,9 @@ const ALL_PUBLISHED_CARS = graphql`
 
 
 const IndexPage = () => {
-  const data /*{ gcms: { products } } */ = useStaticQuery(ALL_PUBLISHED_CARS)
+  const { gcms: { products } } = useStaticQuery(ALL_PUBLISHED_CARS)
 
-  console.log(data)
+  console.log(products)
 
   return (
     <Layout>
