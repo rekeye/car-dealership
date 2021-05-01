@@ -1,7 +1,22 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+exports.createPages = async({graphql, actions: { createPage }}) => {
+    const { gcms: { products }} = await graphql(`
+        {
+            gcms {
+                products {
+                    id
+                    slug
+                }
+            }
+        }
+    `)
 
-// You can delete this file if you're not using it
+    products.forEach(({ id, slug }) => {
+        createPage({
+            path: `/samochody/${slug}`,
+            component: require.resolve('./src/templates/PostPage.js'),
+            context: {
+                id,
+            }
+        })
+    })
+}
