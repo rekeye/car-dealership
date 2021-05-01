@@ -6,4 +6,4 @@ export const wrapRootElement = ({ Root }) => (
     <ApolloProvider client={client}>
         <Root />
     </ApolloProvider>
-)vvv
+)
