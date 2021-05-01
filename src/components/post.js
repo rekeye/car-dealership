@@ -1,31 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { StyledLink } from './styledComponents'
 
-const Container = styled.article``
-const Title = styled.h3``
-const Additional = styled.ul`
-    li {
-        display: inline;
-    }
+const Container = styled.div`
+    width: min(30em, 100%);
+    padding: 1em;
+    background: #f1f1f1;
 `
-const Price = styled.p``
+const Title = styled.h3`
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--black);
+`
+const Additional = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+`
+const Price = styled.p`
+    font-size: 1.4rem;
+    color: var(--base-dark-red);
+`
+const Image = styled.img`
+    width: 100%;
+`
 
-const Post = ({ data: { slug, image, title, mileage, transmissionType, bodyType, price } }) => (
-    <Link to={ slug }>
+const Post = ({ data: { slug, images, title, mileage, transmissionType, bodyType, price } }) => (
+    <StyledLink to={ `/samochody/${slug}` }>
         <Container>
-            <GatsbyImage image={} alt={ title }/>
+            <Image src={ images[0].url } alt={ title }/>
             <Title>{ title }</Title>
             <Additional>
-                <li>{ mileage }</li>
-                <li>{ transmissionType }</li>
-                <li>{ bodyType }</li>
+                <div>{ mileage }</div>
+                <div>{ transmissionType }</div>
+                <div>{ bodyType }</div>
             </Additional>
-            <Price>{ price }</Price>
+            <Price>{ price } PLN</Price>
         </Container>
-    </Link>
+    </StyledLink>
 )
 
 Post.propTypes = {

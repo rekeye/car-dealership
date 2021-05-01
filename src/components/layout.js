@@ -10,6 +10,9 @@ const StyledFooter = styled.footer`
   width: 100%;
   padding: 2em;
 `
+const StyledMain = styled.main`
+  padding: 0 2em;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +29,7 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
+      <StyledMain>{children}</StyledMain>
       <StyledFooter>© {new Date().getFullYear()}, Szymon Paluch</StyledFooter>
     </>
   )

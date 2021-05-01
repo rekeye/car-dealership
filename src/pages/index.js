@@ -3,41 +3,56 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Post from "../components/post"
 
-const TestDiv = styled.div`
-  height: 300vh;
-  width: 100%;
+const PostsContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
 `
 
-const ALL_PUBLISHED_CARS = graphql`
+const IndexPage = () => {
+  const { gcms: { productsConnection: { edges } } } = useStaticQuery(pageQuery)
+
+  console.log(edges)
+
+  return (
+    <Layout>
+      <Seo title="Strona główna" />
+      <PostsContainer>
+        { edges.map(({ node }) => (
+          <Post key={ node.slug } data={ node }/>
+        )) }
+      </PostsContainer>
+    </Layout>
+  )
+}
+
+const pageQuery = graphql`
   {
     gcms {
-        products(orderBy: id_ASC) {
-            id
+      productsConnection(first: 6) {
+        edges {
+          node {
             title
             slug
             price
             mileage
             bodyType
-            fuelType
             transmissionType
+            fuelType
+            images {
+              id
+              handle
+              fileName
+              mimeType
+              url
+            }
           }
+        }
+      }
     }
   }
 `
-
-
-const IndexPage = () => {
-  const { gcms: { products } } = useStaticQuery(ALL_PUBLISHED_CARS)
-
-  console.log(products)
-
-  return (
-    <Layout>
-      <Seo title="Strona główna" />
-      <TestDiv />
-    </Layout>
-  )
-}
 
 export default IndexPage

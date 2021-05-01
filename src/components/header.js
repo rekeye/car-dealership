@@ -16,7 +16,7 @@ const HeaderDiv = styled.div`
     navcontainer &&
     css`
       width: 100%;
-      background: transparent;
+      background: white;
       padding: 1em 1.5em;
       display: flex;
       flex-direction: column;
@@ -88,10 +88,17 @@ const Navbar = styled.nav`
     width: auto;
   }
 `
+const StickedDiv = styled.div`
+  content: "";
+  width: 100%;
+  height: ${({ sticky }) => (sticky ? "9vh" : "0")};
+`
 
 const Header = ({ siteTitle }) => {
   const [nav, setNav] = useState(false)
   const [scroll, setScroll] = useState(0)
+
+  const isSticky = (scroll <= -120)
 
   useScrollPosition(function setScrollPosition({ curPosition }) {
     setScroll(curPosition.y)
@@ -106,7 +113,8 @@ const Header = ({ siteTitle }) => {
           </StyledLink>
         </SiteTitle>
       </HeaderDiv>
-      <HeaderDiv navcontainer sticky={scroll <= -120}>
+      <StickedDiv sticky={isSticky}/>
+      <HeaderDiv navcontainer sticky={isSticky}>
         <Hamburger open={nav} onClick={() => setNav(!nav)}>
           <div />
           <div />
