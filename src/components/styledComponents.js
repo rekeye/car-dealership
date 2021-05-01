@@ -5,7 +5,7 @@ export const StyledLink = styled(Link)`
   color: ${props => (props.color ? props.color : "var(--black)")};
   text-decoration: none;
   ${props =>
-    props.navbar &&
+    props.$navbar &&
     css`
       padding: 0.75em;
       font-size: 1.2rem;

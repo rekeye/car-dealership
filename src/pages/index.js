@@ -10,8 +10,8 @@ const TestDiv = styled.div`
 `
 
 const ALL_PUBLISHED_CARS = graphql`
-  query ALL_PUBLISHED_CARS {
-    gcms{
+  {
+    gcms {
         products(orderBy: id_ASC) {
             id
             title
@@ -35,9 +35,9 @@ const ALL_PUBLISHED_CARS = graphql`
 
 
 const IndexPage = () => {
-  const { gcms: { products } } = useStaticQuery(ALL_PUBLISHED_CARS)
+  const data /*{ gcms: { products } } */ = useStaticQuery(ALL_PUBLISHED_CARS)
 
-  console.log(products)
+  console.log(data)
 
   return (
     <Layout>

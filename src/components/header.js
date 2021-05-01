@@ -93,8 +93,6 @@ const Header = ({ siteTitle }) => {
   const [nav, setNav] = useState(false)
   const [scroll, setScroll] = useState(0)
 
-  console.log(scroll)
-
   useScrollPosition(function setScrollPosition({ curPosition }) {
     setScroll(curPosition.y)
   })
@@ -115,13 +113,13 @@ const Header = ({ siteTitle }) => {
           <div />
         </Hamburger>
         <Navbar open={nav}>
-          <StyledLink to="/" navbar>
+          <StyledLink to="/" $navbar>
             Strona główna
           </StyledLink>
-          <StyledLink to="/offers" navbar>
+          <StyledLink to="/offers" $navbar>
             Wszystkie oferty
           </StyledLink>
-          <StyledLink to="/contact" navbar>
+          <StyledLink to="/contact" $navbar>
             Kontakt
           </StyledLink>
         </Navbar>
