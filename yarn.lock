@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apollo/client@^3.2.5":
+"@apollo/client@^3.2.5", "@apollo/client@^3.3.16":
   version "3.3.16"
   resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.3.16.tgz#e4a51b0f86583b18ab81723660e381ef616536c1"
   integrity sha512-EPTiNpmiU6/vvxpl4lXWQDqS3YddweC1sh/ewCuVP9IK0+xlVGb5vR1yhM/7T3PIJqwz52dGpZyJskmbTfENfQ==
@@ -6366,13 +6366,6 @@ gatsby-page-utils@^1.4.0:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
-gatsby-plugin-apollo@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-apollo/-/gatsby-plugin-apollo-3.0.2.tgz#4a4eca8f475a083cbf6cec4bf99357232506cbd4"
-  integrity sha512-TZLc1FRsbw2TNlQ73EpAyfi9ee6i9rSUCcA1GzP/eWV/5XEGrhzMpWjMm8rbyXvQ9yHCRj0U+tZe9YGdlSv/kQ==
-  dependencies:
-    isomorphic-fetch "^3.0.0"
-
 gatsby-plugin-gatsby-cloud@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.4.1.tgz#e2c5aba4af92c850c3206578f2b1a5730e6c9364"
@@ -6633,6 +6626,11 @@ gatsby-telemetry@^2.4.0:
     lodash "^4.17.21"
     node-fetch "^2.6.1"
     uuid "3.4.0"
+
+gatsby-theme-apollo@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-apollo/-/gatsby-theme-apollo-3.0.3.tgz#c6bfa9d9cd3e851f7db70053a73a3c5dee7bbd9f"
+  integrity sha512-8xHI93SypSHu4y1BbvhJE1sqFQEw1QR7zFPVdZGBcgmiSh5Nbkvf4PBisV/Iiia7NiekiXEne5sCSCK5mu/oRA==
 
 gatsby-transformer-sharp@^3.4.0:
   version "3.4.0"
@@ -8305,14 +8303,6 @@ isobject@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-4.0.0.tgz#3f1c9155e73b192022a80819bacd0343711697b0"
   integrity sha512-S/2fF5wH8SJA/kmwr6HYhK/RI/OkhD84k8ntalo0iJjZikgq1XFvR5M8NPT1x5F7fBwCG3qHfnzeP/Vh/ZxCUA==
-
-isomorphic-fetch@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-3.0.0.tgz#0267b005049046d2421207215d45d6a262b8b8b4"
-  integrity sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==
-  dependencies:
-    node-fetch "^2.6.1"
-    whatwg-fetch "^3.4.1"
 
 isomorphic-ws@4.0.1:
   version "4.0.1"
@@ -13829,11 +13819,6 @@ websocket-extensions@>=0.1.1:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
   integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
-
-whatwg-fetch@^3.4.1:
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
-  integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
