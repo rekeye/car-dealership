@@ -28,7 +28,7 @@ const IndexPage = () => {
   )
 }
 
-const pageQuery = graphql`
+export const pageQuery = graphql`
   {
     gcms {
       productsConnection(first: 6) {

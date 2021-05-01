@@ -13,7 +13,7 @@ exports.createPages = async({graphql, actions: { createPage }}) => {
     products.forEach(({ id, slug }) => {
         createPage({
             path: `/samochody/${slug}`,
-            component: require.resolve('./src/templates/PostPage.js'),
+            component: require.resolve('./src/templates/postPage.js'),
             context: {
                 id,
             }
