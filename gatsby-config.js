@@ -46,11 +46,5 @@ module.exports = {
         url: "https://api-eu-central-1.graphcms.com/v2/cko1dd38yu4qc01yz84lf9k6z/master",
       },
     },
-    {
-      resolve: 'gatsby-plugin-apollo',
-      options: {
-        uri: 'https://api-eu-central-1.graphcms.com/v2/cko1dd38yu4qc01yz84lf9k6z/master'
-      }
-    },
   ],
 }
