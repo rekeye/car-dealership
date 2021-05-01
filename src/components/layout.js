@@ -24,14 +24,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main> 
-        {children}
-      </main>
-      <StyledFooter>
-        © {new Date().getFullYear()}, Szymon Paluch
-      </StyledFooter>
+      <main>{children}</main>
+      <StyledFooter>© {new Date().getFullYear()}, Szymon Paluch</StyledFooter>
     </>
   )
 }

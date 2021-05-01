@@ -16,6 +16,6 @@ GatsbyJS, GraphCMS, Algolia, Styled Components
 
 ## 💫 Dostęp
 
-Strona dostępna jest na GatsbyCloud: 
+Strona dostępna jest na GatsbyCloud:
 
 [Sprawdź tutaj](https://cardealership.gatsbyjs.io)

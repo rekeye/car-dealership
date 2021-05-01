@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 
-import { useScrollPosition } from '../hooks/useScrollPosition'
+import { useScrollPosition } from "../hooks/useScrollPosition"
 
 import styled, { css } from "styled-components"
 import { StyledLink } from "./styledComponents"
@@ -12,23 +12,27 @@ const HeaderDiv = styled.div`
   @media (min-width: 768px) {
     padding: 2em 4em;
   }
-  ${({navcontainer}) => (navcontainer && css`
-    width: 100%;
-    background: transparent;
-    padding: 1em 1.5em;
-    display: flex;
-    flex-direction: column;
-    @media (min-width: 768px) {
-    padding: 1em 4em;
-      flex-direction: row;
-      justify-content: flex-end;
-    }
-  `)}
-  ${({sticky}) => sticky && css`
-    position: fixed;
-    top: 0;
-    right: 0;
-  `}
+  ${({ navcontainer }) =>
+    navcontainer &&
+    css`
+      width: 100%;
+      background: transparent;
+      padding: 1em 1.5em;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 768px) {
+        padding: 1em 4em;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    `}
+  ${({ sticky }) =>
+    sticky &&
+    css`
+      position: fixed;
+      top: 0;
+      right: 0;
+    `}
 `
 const SiteTitle = styled.h1`
   font-weight: 300;
@@ -59,23 +63,23 @@ const Hamburger = styled.button`
     transition: all 0.3s linear;
 
     &:nth-child(1) {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
     &:nth-child(2) {
-      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({ open }) => open ? 0 : 1};
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
-` 
+`
 const Navbar = styled.nav`
-  display: ${({ open }) => open ? 'flex' : 'none'};
+  display: ${({ open }) => (open ? "flex" : "none")};
   flex-direction: column;
   align-items: center;
   width: 100%;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   transition: all 0.3s linear;
   @media (min-width: 768px) {
     display: flex;
@@ -86,13 +90,13 @@ const Navbar = styled.nav`
 `
 
 const Header = ({ siteTitle }) => {
-  const [ nav, setNav ] = useState(false);
-  const [ scroll, setScroll ] = useState(0);
+  const [nav, setNav] = useState(false)
+  const [scroll, setScroll] = useState(0)
 
   console.log(scroll)
 
-  useScrollPosition( function setScrollPosition({curPosition}) {
-    setScroll( curPosition.y )
+  useScrollPosition(function setScrollPosition({ curPosition }) {
+    setScroll(curPosition.y)
   })
 
   return (
@@ -104,11 +108,11 @@ const Header = ({ siteTitle }) => {
           </StyledLink>
         </SiteTitle>
       </HeaderDiv>
-      <HeaderDiv navcontainer sticky={( scroll<=-120 )}>
-        <Hamburger open={nav} onClick={() => setNav( !nav )}>
-          <div/>
-          <div/>
-          <div/>
+      <HeaderDiv navcontainer sticky={scroll <= -120}>
+        <Hamburger open={nav} onClick={() => setNav(!nav)}>
+          <div />
+          <div />
+          <div />
         </Hamburger>
         <Navbar open={nav}>
           <StyledLink to="/" navbar>
@@ -131,7 +135,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: '',
+  siteTitle: "",
 }
 
 export default Header

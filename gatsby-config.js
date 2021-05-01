@@ -31,21 +31,22 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/
-        }
-      }
-    },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'GraphCMS',
-        fieldName: 'graphcms',
-        url: 'https://api-eu-central-1.graphcms.com/v2/cko1dd38yu4qc01yz84lf9k6z/master',
+          include: /assets/,
+        },
       },
     },
-    'gatsby-theme-apollo',
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "GraphCMS",
+        fieldName: "graphcms",
+        url:
+          "https://api-eu-central-1.graphcms.com/v2/cko1dd38yu4qc01yz84lf9k6z/master",
+      },
+    },
+    "gatsby-theme-apollo",
   ],
 }
