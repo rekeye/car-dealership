@@ -13,7 +13,7 @@ const TestDiv = styled.div`
 const ContactPage = () => (
   <Layout>
     <Seo title="Kontakt" />
-    <TestDiv/>
+    <TestDiv />
   </Layout>
 )
 

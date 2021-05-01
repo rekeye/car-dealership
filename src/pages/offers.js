@@ -13,7 +13,7 @@ const TestDiv = styled.div`
 const OffersPage = () => (
   <Layout>
     <Seo title="Oferty" />
-    <TestDiv/>
+    <TestDiv />
   </Layout>
 )
 

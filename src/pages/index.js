@@ -12,7 +12,11 @@ const PostsContainer = styled.section`
 `
 
 const IndexPage = () => {
-  const { gcms: { productsConnection: { edges } } } = useStaticQuery(pageQuery)
+  const {
+    gcms: {
+      productsConnection: { edges },
+    },
+  } = useStaticQuery(pageQuery)
 
   console.log(edges)
 
@@ -20,9 +24,9 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Strona główna" />
       <PostsContainer>
-        { edges.map(({ node }) => (
-          <Post key={ node.slug } data={ node }/>
-        )) }
+        {edges.map(({ node }) => (
+          <Post key={node.slug} data={node} />
+        ))}
       </PostsContainer>
     </Layout>
   )

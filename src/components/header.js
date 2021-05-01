@@ -98,7 +98,7 @@ const Header = ({ siteTitle }) => {
   const [nav, setNav] = useState(false)
   const [scroll, setScroll] = useState(0)
 
-  const isSticky = (scroll <= -120)
+  const isSticky = scroll <= -120
 
   useScrollPosition(function setScrollPosition({ curPosition }) {
     setScroll(curPosition.y)
@@ -113,7 +113,7 @@ const Header = ({ siteTitle }) => {
           </StyledLink>
         </SiteTitle>
       </HeaderDiv>
-      <StickedDiv sticky={isSticky}/>
+      <StickedDiv sticky={isSticky} />
       <HeaderDiv navcontainer sticky={isSticky}>
         <Hamburger open={nav} onClick={() => setNav(!nav)}>
           <div />
