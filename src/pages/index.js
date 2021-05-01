@@ -17,17 +17,10 @@ const ALL_PUBLISHED_CARS = graphql`
             title
             slug
             price
-            description
-            model
-            make
             mileage
             bodyType
-            bodyColor
             fuelType
             transmissionType
-            vin
-            damaged
-            notCrashed
           }
     }
   }
