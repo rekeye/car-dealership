@@ -31,7 +31,7 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: /assets/,
@@ -39,12 +39,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: `gatsby-source-graphql`,
       options: {
-        typeName: "GraphCMS",
-        fieldName: "gcms",
+        typeName: `GraphCMS`,
+        fieldName: `gcms`,
         url:
-          "https://api-eu-central-1.graphcms.com/v2/cko1dd38yu4qc01yz84lf9k6z/master",
+          `https://api-eu-central-1.graphcms.com/v2/cko1dd38yu4qc01yz84lf9k6z/master`,
       },
     },
   ],
