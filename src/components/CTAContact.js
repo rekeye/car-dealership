@@ -1,12 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
 function CTAContact(props) {
-    return (
-        <section>
-            
-        </section>
-    );
+  return <section></section>
 }
 
-export default CTAContact;
+export default CTAContact

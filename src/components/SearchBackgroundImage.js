@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
-import { StyledSectionTitle } from "./styledComponents"
+import { SectionTitle } from "./styledComponents"
 
 const SearchBackgroundImage = ({ className }) => {
   const {
@@ -30,9 +30,9 @@ const SearchBackgroundImage = ({ className }) => {
       fluid={fluid}
       backgroundColor="white"
     >
-      <StyledSectionTitle color="white" cta>
+      <SectionTitle color="white" cta>
         Znajdź swój wymarzony samochód
-      </StyledSectionTitle>
+      </SectionTitle>
       <p>Miejsce na przyszły formularz szukania</p>
     </BackgroundImage>
   )
@@ -60,7 +60,7 @@ const StyledSearchBackgroundImage = styled(SearchBackgroundImage)`
     opacity: 0.5 !important;
   }
   &::after {
-    opacity: .99 !important;
+    opacity: 0.99 !important;
   }
   @media (min-width: 768px) {
     width: calc(100%+8em);
