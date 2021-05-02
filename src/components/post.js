@@ -32,7 +32,7 @@ const StyledGraphImg = styled(GraphImg)`
 const Post = ({
   data: { slug, images, title, mileage, transmissionType, bodyType, price },
 }) => (
-  <StyledLink to={`/samochody/${slug}`}>
+  <StyledLink to={`/oferty/${slug}`}>
     <Container>
       <StyledGraphImg image={images[0]} maxWidth={960} withWebp alt={title}/>
       <InfoWrapper>

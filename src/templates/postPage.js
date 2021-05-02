@@ -13,8 +13,8 @@ const PostPage = ({
 )
 
 export const pageQuery = graphql`
-  query postPageQuery($id: StringQueryOperatorInput) {
-    product: graphCmsProduct(id: $id) {
+  query postPageQuery($id: String!) {
+    product: graphCmsProduct(id: { eq: $id }) {
       title
       description
       slug
