@@ -18,18 +18,16 @@ const PostsContainer = styled.section`
 
 const IndexPage = () => {
   const {
-    gcms: {
-      productsConnection: { edges },
+    products: {
+      nodes,
     },
   } = useStaticQuery(pageQuery)
-
-  console.log(edges)
 
   return (
     <Layout>
       <Seo title="Strona główna" />
       <PostsContainer>
-        {edges.map(({ node }) => (
+        {nodes.map(node => (
           <Post key={node.slug} data={node} />
         ))}
       </PostsContainer>
@@ -39,23 +37,19 @@ const IndexPage = () => {
 
 export const pageQuery = graphql`
   {
-    gcms {
-      productsConnection(first: 6) {
-        edges {
-          node {
-            title
-            slug
-            price
-            mileage
-            bodyType
-            transmissionType
-            fuelType
-            images {
-              handle
-              height
-              width
-            }
-          }
+    products: allGraphCmsProduct(limit: 6) {
+      nodes {
+        title
+        slug
+        price
+        mileage
+        bodyType
+        transmissionType
+        fuelType
+        images {
+          handle
+          height
+          width
         }
       }
     }

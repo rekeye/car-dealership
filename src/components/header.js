@@ -125,10 +125,10 @@ const Header = ({ siteTitle }) => {
           <StyledLink to="/" $navbar>
             Strona główna
           </StyledLink>
-          <StyledLink to="/offers" $navbar>
+          <StyledLink to="/oferty" $navbar>
             Wszystkie oferty
           </StyledLink>
-          <StyledLink to="/contact" $navbar>
+          <StyledLink to="/kontakt" $navbar>
             Kontakt
           </StyledLink>
         </Navbar>

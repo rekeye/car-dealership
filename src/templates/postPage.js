@@ -4,9 +4,7 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 
 const PostPage = ({
-  data: {
-    gcms: { product },
-  },
+  data: { product },
 }) => (
   <Layout>
     <Seo title={product.title} />
@@ -15,30 +13,28 @@ const PostPage = ({
 )
 
 export const pageQuery = graphql`
-  query postPageQuery($id: ID!) {
-    gcms {
-      product(where: { id: $id }) {
-        title
-        description
-        slug
-        price
-        vin
-        mileage
-        model
-        make
-        bodyType
-        bodyColor
-        transmissionType
-        fuelType
-        damaged
-        notCrashed
-        images {
-          id
-          handle
-          fileName
-          mimeType
-          url
-        }
+  query postPageQuery($id: StringQueryOperatorInput) {
+    product: graphCmsProduct(id: $id) {
+      title
+      description
+      slug
+      price
+      vin
+      mileage
+      model
+      make
+      bodyType
+      bodyColor
+      transmissionType
+      fuelType
+      damaged
+      notCrashed
+      images {
+        id
+        handle
+        fileName
+        mimeType
+        url
       }
     }
   }

@@ -38,11 +38,18 @@ const Post = ({
       <InfoWrapper>
         <Title>{title}</Title>
         <Additional>
-          <div>{mileage}</div>
+          <div>{mileage} km</div>
           <div>{transmissionType}</div>
           <div>{bodyType}</div>
         </Additional>
-        <Price>{price} PLN</Price>
+        <Price>
+          {
+            new Intl.NumberFormat("pl-PL", {
+              style: "currency",
+              currency: "PLN"
+            }).format(price)
+          }  
+        </Price>
       </InfoWrapper>
     </Container>
   </StyledLink>
