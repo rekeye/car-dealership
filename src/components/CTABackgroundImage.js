@@ -60,7 +60,7 @@ const StyledCTABackgroundImage = styled(CTABackgroundImage)`
     opacity: 0.5 !important;
   }
   &::after {
-    opacity: .99;
+    opacity: .99 !important;
   }
   @media (min-width: 768px) {
     width: calc(100%+8em);
