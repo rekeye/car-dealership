@@ -27,6 +27,7 @@ export const StyledLink = styled(Link)`
 export const StyledSectionTitle = styled.h2`
   color: ${({ color }) => (color ? color : "var(--black)")};
   font-size: ${({ cta }) => (cta ? "2.6rem" : "1.8rem")};
+  text-align: ${({ cta }) => (cta ? "center" : "inherit")};
   font-weight: 300;
   margin: 1em 0;
 `
