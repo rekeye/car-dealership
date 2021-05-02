@@ -15,8 +15,6 @@ const SectionTwoColumns7030 = styled.section`
   }
 `
 
-const CTAContact = () => (
-  <SectionTwoColumns7030></SectionTwoColumns7030>
-)
+const CTAContact = () => <SectionTwoColumns7030></SectionTwoColumns7030>
 
 export default CTAContact
