@@ -28,6 +28,13 @@ const Price = styled.p`
 const StyledGraphImg = styled(GraphImg)`
   width: inherit;
 `
+const RedCTA = styled.div`
+  padding: 0.8em;
+  background: var(--base-dark-red);
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+`
 
 const Post = ({
   data: { slug, images, title, mileage, transmissionType, bodyType, price },
@@ -38,9 +45,9 @@ const Post = ({
       <InfoWrapper>
         <Title>{title}</Title>
         <Additional>
-          <div>{mileage} km</div>
-          <div>{transmissionType}</div>
-          <div>{bodyType}</div>
+          <li>{mileage} km</li>
+          <li>{transmissionType}</li>
+          <li>{bodyType}</li>
         </Additional>
         <Price>
           {new Intl.NumberFormat("pl-PL", {
@@ -49,6 +56,7 @@ const Post = ({
           }).format(price)}
         </Price>
       </InfoWrapper>
+      <RedCTA>Sprawdź ofertę</RedCTA>
     </Container>
   </StyledLink>
 )

@@ -24,10 +24,27 @@ export const StyledLink = styled(Link)`
     `}
 `
 
-export const StyledSectionTitle = styled.h2`
+export const SectionTitle = styled.h2`
   color: ${({ color }) => (color ? color : "var(--black)")};
-  font-size: ${({ cta }) => (cta ? "2.6rem" : "1.8rem")};
+  font-size: ${({ cta }) => (cta ? "2.6rem" : "2.2rem")};
   text-align: ${({ cta }) => (cta ? "center" : "inherit")};
   font-weight: 300;
-  margin: 1em 0;
+  margin: 1em 0 1em 0;
+`
+
+export const SectionTwoColumns = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3em 0;
+  div {
+    background: var(--white);
+    width: 100%;
+    padding: 2em;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+  p {
+    margin-bottom: 1em;
+  }
 `

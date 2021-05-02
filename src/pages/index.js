@@ -1,15 +1,16 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { StyledSectionTitle } from "../components/styledComponents"
+import { SectionTitle, SectionTwoColumns } from "../components/styledComponents"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
-import StyledCTABackgroundImage from "../components/CTABackgroundImage"
+import StyledSearchBackgroundImage from "../components/searchBackgroundImage"
 
 const PostsContainer = styled.section`
   display: grid;
-  gap: 1em;
+  gap: 2em;
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -27,9 +28,9 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Strona główna" />
 
-      <StyledCTABackgroundImage />
+      <StyledSearchBackgroundImage />
 
-      <StyledSectionTitle>Najnowsze oferty:</StyledSectionTitle>
+      <SectionTitle>Najnowsze oferty samochodów:</SectionTitle>
       <PostsContainer>
         {nodes.map(node => (
           <Post key={node.slug} data={node} />
@@ -41,6 +42,39 @@ const IndexPage = () => {
           <Post key={node.slug} data={node} />
         ))}
       </PostsContainer>
+
+      <SectionTwoColumns>
+        <div>
+          <SectionTitle>O naszym komisie</SectionTitle>
+          <p>
+            Nulla sit do laboris commodo. Ad est ad non sint fugiat ea
+            exercitation enim deserunt veniam. Esse veniam tempor eiusmod culpa
+            qui consectetur anim veniam fugiat. Cillum ullamco anim dolore
+            proident sunt ad dolore. Velit veniam sunt culpa tempor anim ipsum.
+            Veniam esse irure eiusmod voluptate.
+          </p>
+          <p>
+            Et adipisicing cillum qui ex. Cupidatat consequat cillum veniam
+            aliquip amet nostrud ea. Velit Lorem aliqua adipisicing consectetur
+            duis aliqua quis dolor culpa Lorem. Deserunt sit labore occaecat
+            cupidatat in sunt adipisicing. Sit quis exercitation incididunt
+            dolor cillum dolor enim. Mollit dolor fugiat velit ea do irure do
+            pariatur. Laborum eu velit et velit irure exercitation duis
+            consequat.
+          </p>
+          <p>
+            Occaecat dolore nostrud et velit voluptate commodo deserunt mollit
+            qui Lorem. Aute ad duis aliqua eiusmod velit velit reprehenderit.
+            Amet quis proident eiusmod ut consectetur ea. Minim irure incididunt
+            est cupidatat fugiat ea nostrud aliquip ullamco mollit aute
+            reprehenderit. Nostrud fugiat sunt cupidatat et ullamco.
+          </p>
+        </div>
+        <StaticImage
+          src="../images/hyundai-about.jpg"
+          alt="zdjęcie samochodu jadącego na autostradzie, na drugim planie widać wzgórza"
+        />
+      </SectionTwoColumns>
     </Layout>
   )
 }

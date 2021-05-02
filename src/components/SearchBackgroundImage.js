@@ -2,9 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
-import { StyledSectionTitle } from "./styledComponents"
+import { SectionTitle } from "./styledComponents"
 
-const CTABackgroundImage = ({ className }) => {
+const SearchBackgroundImage = ({ className }) => {
   const {
     image: {
       childImageSharp: { fluid },
@@ -30,15 +30,15 @@ const CTABackgroundImage = ({ className }) => {
       fluid={fluid}
       backgroundColor="white"
     >
-      <StyledSectionTitle color="white" cta>
+      <SectionTitle color="white" cta>
         Znajdź swój wymarzony samochód
-      </StyledSectionTitle>
+      </SectionTitle>
       <p>Miejsce na przyszły formularz szukania</p>
     </BackgroundImage>
   )
 }
 
-const StyledCTABackgroundImage = styled(CTABackgroundImage)`
+const StyledSearchBackgroundImage = styled(SearchBackgroundImage)`
   height: 40em;
   width: calc(100%+3em);
   margin: 0 -1.5em;
@@ -60,7 +60,7 @@ const StyledCTABackgroundImage = styled(CTABackgroundImage)`
     opacity: 0.5 !important;
   }
   &::after {
-    opacity: .99 !important;
+    opacity: 0.99 !important;
   }
   @media (min-width: 768px) {
     width: calc(100%+8em);
@@ -69,4 +69,4 @@ const StyledCTABackgroundImage = styled(CTABackgroundImage)`
   }
 `
 
-export default StyledCTABackgroundImage
+export default StyledSearchBackgroundImage
