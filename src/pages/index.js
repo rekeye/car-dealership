@@ -6,7 +6,7 @@ import { SectionTitle, SectionTwoColumns } from "../components/styledComponents"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
-import StyledSearchBackgroundImage from "../components/SearchBackgroundImage"
+import StyledSearchBackgroundImage from "../components/searchBackgroundImage"
 
 const PostsContainer = styled.section`
   display: grid;
