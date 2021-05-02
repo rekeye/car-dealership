@@ -6,9 +6,14 @@ import Seo from "../components/seo"
 import Post from "../components/post"
 
 const PostsContainer = styled.section`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 1em;
+  @media(min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media(min-width: 1286px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `
 
 const IndexPage = () => {
@@ -46,11 +51,9 @@ export const pageQuery = graphql`
             transmissionType
             fuelType
             images {
-              id
               handle
-              fileName
-              mimeType
-              url
+              height
+              width
             }
           }
         }

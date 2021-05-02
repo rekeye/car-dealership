@@ -9,6 +9,7 @@ import { StyledLink } from "./styledComponents"
 const HeaderDiv = styled.div`
   background: var(--base-dark-red);
   padding: 1.5em;
+  z-index: 100;
   @media (min-width: 768px) {
     padding: 2em 4em;
   }

@@ -1,12 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import GraphImg from "graphcms-image"
 import { StyledLink } from "./styledComponents"
 
 const Container = styled.div`
-  width: min(30em, 100%);
-  padding: 1em;
+  width: 100%;
   background: #f1f1f1;
+`
+const InfoWrapper = styled.div`
+  padding: 1em;
 `
 const Title = styled.h3`
   font-size: 1.6rem;
@@ -15,15 +18,15 @@ const Title = styled.h3`
 `
 const Additional = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1em;
 `
 const Price = styled.p`
   font-size: 1.4rem;
   color: var(--base-dark-red);
 `
-const Image = styled.img`
-  width: 100%;
+const StyledGraphImg = styled(GraphImg)`
+  width: inherit;
 `
 
 const Post = ({
@@ -31,14 +34,16 @@ const Post = ({
 }) => (
   <StyledLink to={`/samochody/${slug}`}>
     <Container>
-      <Image src={images[0].url} alt={title} />
-      <Title>{title}</Title>
-      <Additional>
-        <div>{mileage}</div>
-        <div>{transmissionType}</div>
-        <div>{bodyType}</div>
-      </Additional>
-      <Price>{price} PLN</Price>
+      <StyledGraphImg image={images[0]} maxWidth={960} withWebp alt={title}/>
+      <InfoWrapper>
+        <Title>{title}</Title>
+        <Additional>
+          <div>{mileage}</div>
+          <div>{transmissionType}</div>
+          <div>{bodyType}</div>
+        </Additional>
+        <Price>{price} PLN</Price>
+      </InfoWrapper>
     </Container>
   </StyledLink>
 )

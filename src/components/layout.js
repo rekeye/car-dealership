@@ -6,12 +6,18 @@ import styled from "styled-components"
 import Header from "./header"
 import GlobalStyle from "./globalStyle" //Global style component provided by styled-components (https://www.gatsbyjs.com/docs/how-to/styling/styled-components/#creating-global-styles)
 
-const StyledFooter = styled.footer`
+const Footer = styled.footer`
   width: 100%;
-  padding: 2em;
+  padding: 2em 1.5em;
+  @media(min-width: 768px) {
+    padding: 2em 4em
+  }
 `
-const StyledMain = styled.main`
-  padding: 0 2em;
+const Main = styled.main`
+  padding: 0 1.5em;
+  @media(min-width: 768px) {
+    padding: 0 4em
+  }
 `
 
 const Layout = ({ children }) => {
@@ -29,8 +35,8 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <StyledMain>{children}</StyledMain>
-      <StyledFooter>© {new Date().getFullYear()}, Szymon Paluch</StyledFooter>
+      <Main>{children}</Main>
+      <Footer>© {new Date().getFullYear()}, Szymon Paluch</Footer>
     </>
   )
 }
