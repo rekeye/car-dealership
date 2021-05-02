@@ -2,10 +2,10 @@ import { Link } from "gatsby"
 import styled, { css } from "styled-components"
 
 export const StyledLink = styled(Link)`
-  color: ${props => (props.color ? props.color : "var(--black)")};
+  color: ${({ color }) => (color ? color : "var(--black)")};
   text-decoration: none;
-  ${props =>
-    props.$navbar &&
+  ${({ $navbar }) =>
+    $navbar &&
     css`
       padding: 0.75em;
       font-size: 1.2rem;
@@ -25,7 +25,8 @@ export const StyledLink = styled(Link)`
 `
 
 export const StyledSectionTitle = styled.h2`
-  font-size: 1.8rem;
+  color: ${({ color }) => (color ? color : "var(--black)")};
+  font-size: ${({ cta }) => (cta ? "2.6rem" : "1.8rem")};
   font-weight: 300;
   margin: 1em 0;
 `

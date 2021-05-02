@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400&display=swap');
-
     :root {
         --base-dark-red: #CA0305;
         --base-dark-blue: #00249F;

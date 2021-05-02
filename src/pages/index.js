@@ -5,7 +5,7 @@ import { StyledSectionTitle } from "../components/styledComponents"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
-import CTABackgroundImage from "../components/CTABackgroundImage"
+import StyledCTABackgroundImage from "../components/CTABackgroundImage"
 
 const PostsContainer = styled.section`
   display: grid;
@@ -27,7 +27,7 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Strona główna" />
 
-      <CTABackgroundImage/>
+      <StyledCTABackgroundImage />
 
       <StyledSectionTitle>Najnowsze oferty:</StyledSectionTitle>
       <PostsContainer>
