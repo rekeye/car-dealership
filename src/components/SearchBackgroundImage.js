@@ -4,7 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 import { StyledSectionTitle } from "./styledComponents"
 
-const CTABackgroundImage = ({ className }) => {
+const SearchBackgroundImage = ({ className }) => {
   const {
     image: {
       childImageSharp: { fluid },
@@ -38,7 +38,7 @@ const CTABackgroundImage = ({ className }) => {
   )
 }
 
-const StyledCTABackgroundImage = styled(CTABackgroundImage)`
+const StyledSearchBackgroundImage = styled(SearchBackgroundImage)`
   height: 40em;
   width: calc(100%+3em);
   margin: 0 -1.5em;
@@ -59,6 +59,9 @@ const StyledCTABackgroundImage = styled(CTABackgroundImage)`
     background-image: none !important;
     opacity: 0.5 !important;
   }
+  &::after {
+    opacity: .99 !important;
+  }
   @media (min-width: 768px) {
     width: calc(100%+8em);
     margin: 0 -4em;
@@ -66,4 +69,4 @@ const StyledCTABackgroundImage = styled(CTABackgroundImage)`
   }
 `
 
-export default StyledCTABackgroundImage
+export default StyledSearchBackgroundImage
