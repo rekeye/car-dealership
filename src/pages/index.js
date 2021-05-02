@@ -1,6 +1,7 @@
 import * as React from "react"
-import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
+import styled from "styled-components"
+import { StyledSectionTitle } from "../components/styledComponents"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
@@ -8,24 +9,24 @@ import Post from "../components/post"
 const PostsContainer = styled.section`
   display: grid;
   gap: 1em;
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media(min-width: 1286px) {
+  @media (min-width: 1286px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `
 
 const IndexPage = () => {
   const {
-    products: {
-      nodes,
-    },
+    products: { nodes },
   } = useStaticQuery(pageQuery)
 
   return (
     <Layout>
       <Seo title="Strona główna" />
+
+      <StyledSectionTitle>Najnowsze oferty:</StyledSectionTitle>
       <PostsContainer>
         {nodes.map(node => (
           <Post key={node.slug} data={node} />

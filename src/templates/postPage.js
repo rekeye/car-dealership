@@ -3,9 +3,7 @@ import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 
-const PostPage = ({
-  data: { product },
-}) => (
+const PostPage = ({ data: { product } }) => (
   <Layout>
     <Seo title={product.title} />
     <div>{product.title}</div>

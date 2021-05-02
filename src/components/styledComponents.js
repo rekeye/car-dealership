@@ -23,3 +23,9 @@ export const StyledLink = styled(Link)`
       }
     `}
 `
+
+export const StyledSectionTitle = styled.h2`
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 1em 0;
+`

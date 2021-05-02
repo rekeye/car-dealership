@@ -9,14 +9,14 @@ import GlobalStyle from "./globalStyle" //Global style component provided by sty
 const Footer = styled.footer`
   width: 100%;
   padding: 2em 1.5em;
-  @media(min-width: 768px) {
-    padding: 2em 4em
+  @media (min-width: 768px) {
+    padding: 2em 4em;
   }
 `
 const Main = styled.main`
   padding: 0 1.5em;
-  @media(min-width: 768px) {
-    padding: 0 4em
+  @media (min-width: 768px) {
+    padding: 0 4em;
   }
 `
 

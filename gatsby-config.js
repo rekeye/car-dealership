@@ -42,7 +42,7 @@ module.exports = {
       resolve: `gatsby-source-graphcms`,
       options: {
         endpoint: `https://api-eu-central-1.graphcms.com/v2/cko1dd38yu4qc01yz84lf9k6z/master`,
-        locales: [`pl`]
+        locales: [`pl`],
       },
     },
   ],

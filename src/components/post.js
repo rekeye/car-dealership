@@ -34,7 +34,7 @@ const Post = ({
 }) => (
   <StyledLink to={`/oferty/${slug}`}>
     <Container>
-      <StyledGraphImg image={images[0]} maxWidth={960} withWebp alt={title}/>
+      <StyledGraphImg image={images[0]} maxWidth={960} withWebp alt={title} />
       <InfoWrapper>
         <Title>{title}</Title>
         <Additional>
@@ -43,12 +43,10 @@ const Post = ({
           <div>{bodyType}</div>
         </Additional>
         <Price>
-          {
-            new Intl.NumberFormat("pl-PL", {
-              style: "currency",
-              currency: "PLN"
-            }).format(price)
-          }  
+          {new Intl.NumberFormat("pl-PL", {
+            style: "currency",
+            currency: "PLN",
+          }).format(price)}
         </Price>
       </InfoWrapper>
     </Container>
