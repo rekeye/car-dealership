@@ -22,6 +22,14 @@ export const StyledLink = styled(Link)`
         transform: scaleX(1);
       }
     `}
+    ${({ $cta }) => 
+      $cta &&
+      css`
+        border: 3px solid var(--base-dark-blue);
+        color: var(--base-dark-blue);
+        padding: 0.75em;
+        width: 100%;
+      `}
 `
 
 export const SectionTitle = styled.h2`
@@ -29,7 +37,6 @@ export const SectionTitle = styled.h2`
   font-size: ${({ cta }) => (cta ? "2.6rem" : "2.2rem")};
   text-align: ${({ cta }) => (cta ? "center" : "inherit")};
   font-weight: 300;
-  margin: 1em 0 1em 0;
 `
 
 export const SectionTwoColumns = styled.section`

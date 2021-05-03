@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
 import StyledSearchBackgroundImage from "../components/SearchBackgroundImage"
+import CTAContact from "../components/CTAContact"
 
 const PostsContainer = styled.section`
   display: grid;
@@ -75,6 +76,8 @@ const IndexPage = () => {
           alt="zdjęcie samochodu jadącego na autostradzie, na drugim planie widać wzgórza"
         />
       </SectionTwoColumns>
+
+      <CTAContact />
     </Layout>
   )
 }

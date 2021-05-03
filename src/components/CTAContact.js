@@ -1,20 +1,28 @@
 import React from "react"
 import styled from "styled-components"
+import { SectionTitle, StyledLink } from './styledComponents'
 
-const SectionTwoColumns7030 = styled.section`
+const Container = styled.section`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
   div {
-    padding: 2em;
-  }
-  &:nth-child(1) {
-    width: 70%;
-  }
-  &:nth-child(2) {
-    width: 30%;
+    padding: 1em;
   }
 `
 
-const CTAContact = () => <SectionTwoColumns7030></SectionTwoColumns7030>
+const CTAContact = () => (
+  <Container>
+    <div>
+      <SectionTitle>Skontaktuj się z nami już teraz!</SectionTitle>
+    </div>
+    <div>
+      <StyledLink to="/kontakt" $cta>
+        Kontakt
+      </StyledLink>
+    </div>
+  </Container>
+)
 
 export default CTAContact
