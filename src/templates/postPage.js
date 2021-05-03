@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
+import Post from "../components/post"
 import {
   SectionTitle,
   SectionTwoColumns,
@@ -37,19 +38,20 @@ const PostPage = ({
       notCrashed,
       images,
     },
+    products: { nodes },
   },
 }) => (
   <Layout>
     <Seo title={title} />
-    <StyledGraphImg image={images[0]} maxWidth={960} withWebp alt={title} />
     <SectionTwoColumns $postpage>
+      <div>
+        <StyledGraphImg image={images[0]} maxWidth={960} withWebp alt={title} />
+      </div>
       <div>
         <SectionTitle bigger padding>
           {title}
         </SectionTitle>
         <Price>{getPriceFormat(price)}</Price>
-      </div>
-      <div>
         <StyledLink to="/kontakt" $solidcta>
           {" "}
           Kontakt w sprawie ogłoszenia <ContactMail />{" "}
@@ -60,9 +62,9 @@ const PostPage = ({
         </StyledLink>
       </div>
     </SectionTwoColumns>
-    <SectionTwoColumns $postpage>
+    <SectionTwoColumns $margin $postpage>
       <div>
-        <SectionTitle>Szczegóły: </SectionTitle>
+        <SectionTitle padding>Szczegóły: </SectionTitle>
         <SectionTwoColumns $postpage>
           <div>
             <p>VIN: {vin}</p>
@@ -79,10 +81,16 @@ const PostPage = ({
             <p>Powypadkowy: {notCrashed}</p>
           </div>
         </SectionTwoColumns>
-      </div>
-      <div>
         <SectionTitle padding>Opis pojazdu: </SectionTitle>
         <p>{description}</p>
+      </div>
+      <div>
+        <SectionTitle padding>Inne oferty: </SectionTitle>
+        <SectionTwoColumns $postpage>
+          {nodes.map(node => (
+            <div><Post key={node.slug} data={node} /></div>
+          ))}
+        </SectionTwoColumns>
       </div>
     </SectionTwoColumns>
   </Layout>
@@ -105,11 +113,25 @@ export const pageQuery = graphql`
       damaged
       notCrashed
       images {
-        id
         handle
-        fileName
-        mimeType
-        url
+        height
+        width
+      }
+    }
+    products: allGraphCmsProduct(limit: 2) {
+      nodes {
+        title
+        slug
+        price
+        mileage
+        bodyType
+        transmissionType
+        fuelType
+        images {
+          handle
+          height
+          width
+        }
       }
     }
   }

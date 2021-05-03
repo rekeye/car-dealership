@@ -6,7 +6,6 @@ import ChevronRight from "../assets/chevron-right.svg"
 import { getPriceFormat } from "../hooks/getPriceFormat"
 
 const Container = styled.div`
-  width: 100%;
   background: #f1f1f1;
 `
 const InfoWrapper = styled.div`

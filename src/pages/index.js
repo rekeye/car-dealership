@@ -44,7 +44,7 @@ const IndexPage = () => {
         ))}
       </PostsContainer>
 
-      <SectionTwoColumns>
+      <SectionTwoColumns $margin>
         <div>
           <SectionTitle>O naszym komisie</SectionTitle>
           <p>

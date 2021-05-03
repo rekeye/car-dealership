@@ -44,7 +44,7 @@ export const StyledLink = styled(Link)`
       justify-content: space-evenly;
       font-size: 1.4rem;
       padding: 0.75em;
-      margin-bottom: 0.5em;
+      margin: 0.75em 0;
       background: var(--base-dark-red);
       color: white;
     `}
@@ -61,13 +61,13 @@ export const SectionTitle = styled.h2`
 export const SectionTwoColumns = styled.section`
   display: flex;
   flex-wrap: wrap;
-  margin: 3em 0;
-  div {
+  margin: ${({ $margin }) => ($margin ? "3em 0" : "0")};
+  > div {
     background: var(--white);
     width: 100%;
-    padding: 2em;
     @media (min-width: 768px) {
       width: 50%;
+      padding: 2em;
     }
   }
   p {
@@ -76,14 +76,25 @@ export const SectionTwoColumns = styled.section`
   ${({ $postpage }) =>
     $postpage &&
     css`
-      div {
+      > div {
         margin: 0;
         background: transparent;
-        padding: 0;
+        margin-bottom: 1em;
+        @media (min-width: 768px) {
+          padding: 1em;
+        }
       }
     `}
 `
 
 export const StyledGraphImg = styled(GraphImg)`
   width: inherit;
+  margin: auto;
+  ${({ $postpage }) =>
+    $postpage &&
+    css`
+      @media (min-width: 768px) {
+        width: 75%;
+      }
+    `}
 `
