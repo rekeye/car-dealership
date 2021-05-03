@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import GraphImg from "graphcms-image"
 import styled, { css } from "styled-components"
 
 export const StyledLink = styled(Link)`
@@ -22,24 +23,24 @@ export const StyledLink = styled(Link)`
         transform: scaleX(1);
       }
     `}
-    ${({ $cta }) => 
-      $cta &&
-      css`
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-        border: 3px solid var(--base-dark-red);
-        color: var(--base-dark-red);
-        padding: 0.75em;
-        width: 100%;
-      `}
+  ${({ $cta }) =>
+    $cta &&
+    css`
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      border: 3px solid var(--base-dark-red);
+      color: var(--base-dark-red);
+      padding: 0.75em;
+      width: 100%;
+    `}
 `
 
 export const SectionTitle = styled.h2`
-  color: ${({ color }) => color ? color : "var(--black)"};
-  font-size: ${({ cta }) => cta ? "2.6rem" : "2.2rem"};
-  text-align: ${({ cta }) => cta ? "center" : "inherit"};
-  padding: ${({ padding }) => padding ? "0.75em 0" : "0"};
+  color: ${({ color }) => (color ? color : "var(--black)")};
+  font-size: ${({ cta }) => (cta ? "2.6rem" : "2.2rem")};
+  text-align: ${({ cta }) => (cta ? "center" : "inherit")};
+  padding: ${({ padding }) => (padding ? "0.75em 0" : "0")};
   font-weight: 300;
 `
 
@@ -58,4 +59,8 @@ export const SectionTwoColumns = styled.section`
   p {
     margin-bottom: 1em;
   }
+`
+
+export const StyledGraphImg = styled(GraphImg)`
+  width: inherit;
 `

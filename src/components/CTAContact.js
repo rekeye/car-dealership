@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { SectionTitle, StyledLink } from './styledComponents'
-import ContactSVG from '../assets/contact.svg';
+import { SectionTitle, StyledLink } from "./styledComponents"
+import ContactSVG from "../assets/contact.svg"
 
 const Container = styled.section`
   display: flex;
@@ -22,7 +22,7 @@ const CTAContact = () => (
     <div>
       <StyledLink to="/kontakt" $cta>
         Kontakt
-        <ContactSVG/>
+        <ContactSVG />
       </StyledLink>
     </div>
   </Container>

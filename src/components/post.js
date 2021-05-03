@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import GraphImg from "graphcms-image"
-import { StyledLink } from "./styledComponents"
-import ChevronRight from '../assets/chevron-right.svg';
+import { StyledLink, StyledGraphImg } from "./styledComponents"
+import ChevronRight from "../assets/chevron-right.svg"
+import { getPriceFormat } from "../hooks/getPriceFormat"
 
 const Container = styled.div`
   width: 100%;
@@ -26,15 +26,12 @@ const Price = styled.p`
   font-size: 1.4rem;
   color: var(--base-dark-red);
 `
-const StyledGraphImg = styled(GraphImg)`
-  width: inherit;
-`
 const RedCTA = styled.div`
   padding: 0.8em;
   background: var(--base-dark-red);
   color: white;
   font-size: 1.2rem;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4em;
@@ -53,14 +50,11 @@ const Post = ({
           <li>{transmissionType}</li>
           <li>{bodyType}</li>
         </Additional>
-        <Price>
-          {new Intl.NumberFormat("pl-PL", {
-            style: "currency",
-            currency: "PLN",
-          }).format(price)}
-        </Price>
+        <Price>{getPriceFormat(price)}</Price>
       </InfoWrapper>
-      <RedCTA>Sprawdź ofertę <ChevronRight/></RedCTA>
+      <RedCTA>
+        Sprawdź ofertę <ChevronRight />
+      </RedCTA>
     </Container>
   </StyledLink>
 )
