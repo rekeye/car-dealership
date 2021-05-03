@@ -30,7 +30,7 @@ const SearchBackgroundImage = ({ className }) => {
       fluid={fluid}
       backgroundColor="white"
     >
-      <SectionTitle color="white" cta>
+      <SectionTitle color="white" bigger>
         Znajdź swój wymarzony samochód
       </SectionTitle>
       <p>Miejsce na przyszły formularz szukania</p>

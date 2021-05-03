@@ -28,17 +28,31 @@ export const StyledLink = styled(Link)`
     css`
       display: flex;
       align-items: center;
+      justify-content: space-evenly;
+      font-size: 1.4rem;
       gap: 0.5em;
       border: 3px solid var(--base-dark-red);
       color: var(--base-dark-red);
       padding: 0.75em;
       width: 100%;
     `}
+  ${({ $solidcta }) =>
+    $solidcta &&
+    css`
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 1.4rem;
+      padding: 0.75em;
+      margin-bottom: 0.5em;
+      background: var(--base-dark-red);
+      color: white;
+    `}
 `
 
 export const SectionTitle = styled.h2`
   color: ${({ color }) => (color ? color : "var(--black)")};
-  font-size: ${({ cta }) => (cta ? "2.6rem" : "2.2rem")};
+  font-size: ${({ bigger }) => (bigger ? "2.6rem" : "2.2rem")};
   text-align: ${({ cta }) => (cta ? "center" : "inherit")};
   padding: ${({ padding }) => (padding ? "0.75em 0" : "0")};
   font-weight: 300;
@@ -59,6 +73,15 @@ export const SectionTwoColumns = styled.section`
   p {
     margin-bottom: 1em;
   }
+  ${({ $postpage }) =>
+    $postpage &&
+    css`
+      div {
+        margin: 0;
+        background: transparent;
+        padding: 0;
+      }
+    `}
 `
 
 export const StyledGraphImg = styled(GraphImg)`
