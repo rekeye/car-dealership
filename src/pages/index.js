@@ -31,7 +31,7 @@ const IndexPage = () => {
 
       <StyledSearchBackgroundImage />
 
-      <SectionTitle>Najnowsze oferty samochodów:</SectionTitle>
+      <SectionTitle padding>Najnowsze oferty samochodów:</SectionTitle>
       <PostsContainer>
         {nodes.map(node => (
           <Post key={node.slug} data={node} />
