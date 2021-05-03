@@ -98,3 +98,14 @@ export const StyledGraphImg = styled(GraphImg)`
       }
     `}
 `
+
+export const PostsContainer = styled.section`
+  display: grid;
+  gap: 2em;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1286px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`

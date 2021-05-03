@@ -1,24 +1,13 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import styled from "styled-components"
-import { SectionTitle, SectionTwoColumns } from "../components/styledComponents"
+import { SectionTitle, SectionTwoColumns, PostsContainer } from "../components/styledComponents"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
 import StyledSearchBackgroundImage from "../components/SearchBackgroundImage"
 import CTAContact from "../components/CTAContact"
 
-const PostsContainer = styled.section`
-  display: grid;
-  gap: 2em;
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (min-width: 1286px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-`
 
 const IndexPage = () => {
   const {
@@ -33,12 +22,6 @@ const IndexPage = () => {
 
       <SectionTitle padding>Najnowsze oferty samochodów:</SectionTitle>
       <PostsContainer>
-        {nodes.map(node => (
-          <Post key={node.slug} data={node} />
-        ))}
-        {nodes.map(node => (
-          <Post key={node.slug} data={node} />
-        ))}
         {nodes.map(node => (
           <Post key={node.slug} data={node} />
         ))}

@@ -88,7 +88,9 @@ const PostPage = ({
         <SectionTitle padding>Inne oferty: </SectionTitle>
         <SectionTwoColumns $postpage>
           {nodes.map(node => (
-            <div><Post key={node.slug} data={node} /></div>
+            <div>
+              <Post key={node.slug} data={node} />
+            </div>
           ))}
         </SectionTwoColumns>
       </div>
