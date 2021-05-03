@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import GraphImg from "graphcms-image"
 import { StyledLink } from "./styledComponents"
+import ChevronRight from '../assets/chevron-right.svg';
 
 const Container = styled.div`
   width: 100%;
@@ -33,7 +34,10 @@ const RedCTA = styled.div`
   background: var(--base-dark-red);
   color: white;
   font-size: 1.2rem;
-  text-align: center;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
 `
 
 const Post = ({
@@ -56,7 +60,7 @@ const Post = ({
           }).format(price)}
         </Price>
       </InfoWrapper>
-      <RedCTA>Sprawdź ofertę</RedCTA>
+      <RedCTA>Sprawdź ofertę <ChevronRight/></RedCTA>
     </Container>
   </StyledLink>
 )
