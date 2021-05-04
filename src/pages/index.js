@@ -18,8 +18,6 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Strona główna" />
 
-      <StyledSearchBackgroundImage />
-
       <SectionTitle $padding>Najnowsze oferty samochodów:</SectionTitle>
       <PostsContainer>
         {nodes.map(node => (
