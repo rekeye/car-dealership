@@ -5,8 +5,10 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Post from "../components/post"
 import {
-  SectionTitle,
   SectionTwoColumns,
+  ColumnSpaceBetween,
+  FlexSpaceBetween,
+  SectionTitle,
   StyledGraphImg,
   StyledLink,
 } from "../components/styledComponents"
@@ -47,24 +49,15 @@ const PostPage = ({
       <div>
         <StyledGraphImg image={images[0]} maxWidth={960} withWebp alt={title} />
       </div>
+      <ColumnSpaceBetween>
       <div>
-        <SectionTitle bigger padding>
-          {title}
-        </SectionTitle>
-        <Price>{getPriceFormat(price)}</Price>
-        <StyledLink to="/kontakt" $solidcta>
-          {" "}
-          Kontakt w sprawie ogłoszenia <ContactMail />{" "}
-        </StyledLink>
-        <StyledLink to="#" $cta>
-          {" "}
-          Zadzwoń do nas <Contact />{" "}
-        </StyledLink>
-      </div>
-    </SectionTwoColumns>
-    <SectionTwoColumns $margin $postpage>
-      <div>
-        <SectionTitle padding>Szczegóły: </SectionTitle>
+        <FlexSpaceBetween>
+          <SectionTitle $bigger $padding>
+            {title}
+          </SectionTitle>
+          <Price>{getPriceFormat(price)}</Price>
+        </FlexSpaceBetween>
+        <SectionTitle>Szczegóły: </SectionTitle>
         <SectionTwoColumns $postpage>
           <div>
             <p>VIN: {vin}</p>
@@ -81,11 +74,26 @@ const PostPage = ({
             <p>Powypadkowy: {notCrashed}</p>
           </div>
         </SectionTwoColumns>
-        <SectionTitle padding>Opis pojazdu: </SectionTitle>
+      </div>
+      <div>
+        <StyledLink to="/kontakt" $button $solidcta>
+          {" "}
+          Kontakt w sprawie ogłoszenia <ContactMail />{" "}
+        </StyledLink>
+        <StyledLink to="#"  $button $cta>
+          {" "}
+          Zadzwoń do nas <Contact />{" "}
+        </StyledLink>
+      </div>
+      </ColumnSpaceBetween>
+    </SectionTwoColumns>
+    <SectionTwoColumns $margin $postpage>
+      <div>
+        <SectionTitle $padding>Opis pojazdu: </SectionTitle>
         <p>{description}</p>
       </div>
       <div>
-        <SectionTitle padding>Inne oferty: </SectionTitle>
+        <SectionTitle $padding>Inne oferty: </SectionTitle>
         <SectionTwoColumns $postpage>
           {nodes.map(node => (
             <div>

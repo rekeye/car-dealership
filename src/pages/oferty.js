@@ -15,7 +15,7 @@ const OffersPage = () => {
     <Layout>
       <Seo title="Oferty" />
       <StyledSearchBackgroundImage/>
-      <SectionTitle padding>Wszystkie oferty: </SectionTitle>
+      <SectionTitle $padding>Wszystkie oferty: </SectionTitle>
       <PostsContainer>
       {nodes.map(node => (
         <Post key={node.slug} data={node} />

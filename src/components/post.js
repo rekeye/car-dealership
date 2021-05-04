@@ -18,7 +18,8 @@ const Title = styled.h3`
 `
 const Additional = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 1em;
 `
 const Price = styled.p`
@@ -45,9 +46,9 @@ const Post = ({
       <InfoWrapper>
         <Title>{title}</Title>
         <Additional>
-          <li>{mileage} km</li>
-          <li>{transmissionType}</li>
-          <li>{bodyType}</li>
+          <div>{mileage} km</div>
+          <div>{transmissionType}</div>
+          <div>{bodyType.replace('_', ' ')}</div>
         </Additional>
         <Price>{getPriceFormat(price)}</Price>
       </InfoWrapper>

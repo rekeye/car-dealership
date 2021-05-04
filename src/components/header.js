@@ -109,7 +109,7 @@ const Header = ({ siteTitle }) => {
     <header>
       <HeaderDiv>
         <SiteTitle>
-          <StyledLink to="/" color="white">
+          <StyledLink to="/" $color="white">
             {siteTitle}
           </StyledLink>
         </SiteTitle>

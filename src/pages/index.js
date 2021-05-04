@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { SectionTitle, SectionTwoColumns, PostsContainer } from "../components/styledComponents"
+import { SectionTitle, SectionTwoColumns, PostsContainer, StyledLink } from "../components/styledComponents"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
@@ -20,16 +20,18 @@ const IndexPage = () => {
 
       <StyledSearchBackgroundImage />
 
-      <SectionTitle padding>Najnowsze oferty samochodów:</SectionTitle>
+      <SectionTitle $padding>Najnowsze oferty samochodów:</SectionTitle>
       <PostsContainer>
         {nodes.map(node => (
           <Post key={node.slug} data={node} />
         ))}
       </PostsContainer>
 
+      <StyledLink to="oferty" $button $solidcta>Zobacz wszystkie oferty</StyledLink>
+
       <SectionTwoColumns $margin>
-        <div>
-          <SectionTitle>O naszym komisie</SectionTitle>
+        <div style={{padding: '0 1em'}}>
+          <SectionTitle $padding>O naszym komisie</SectionTitle>
           <p>
             Nulla sit do laboris commodo. Ad est ad non sint fugiat ea
             exercitation enim deserunt veniam. Esse veniam tempor eiusmod culpa
@@ -46,6 +48,12 @@ const IndexPage = () => {
             pariatur. Laborum eu velit et velit irure exercitation duis
             consequat.
           </p>
+          <ul>
+            <li>Dolor consectetur cupidatat id sit.</li>
+            <li>Dolor consectetur cupidatat id sit.</li>
+            <li>Dolor consectetur cupidatat id sit.</li>
+            <li>Dolor consectetur cupidatat id sit.</li>
+          </ul>
           <p>
             Occaecat dolore nostrud et velit voluptate commodo deserunt mollit
             qui Lorem. Aute ad duis aliqua eiusmod velit velit reprehenderit.

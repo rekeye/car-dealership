@@ -17,10 +17,10 @@ const Container = styled.section`
 const CTAContact = () => (
   <Container>
     <div>
-      <SectionTitle cta>Skontaktuj się z nami już teraz!</SectionTitle>
+      <SectionTitle $cta>Skontaktuj się z nami już teraz!</SectionTitle>
     </div>
     <div>
-      <StyledLink to="/kontakt" $cta>
+      <StyledLink to="/kontakt" $cta $button>
         Kontakt
         <ContactSVG />
       </StyledLink>
