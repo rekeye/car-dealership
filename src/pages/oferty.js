@@ -14,12 +14,12 @@ const OffersPage = () => {
   return (
     <Layout>
       <Seo title="Oferty" />
-      <StyledSearchBackgroundImage/>
+      <StyledSearchBackgroundImage />
       <SectionTitle $padding>Wszystkie oferty: </SectionTitle>
       <PostsContainer>
-      {nodes.map(node => (
-        <Post key={node.slug} data={node} />
-      ))}
+        {nodes.map(node => (
+          <Post key={node.slug} data={node} />
+        ))}
       </PostsContainer>
     </Layout>
   )

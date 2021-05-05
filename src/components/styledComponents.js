@@ -15,7 +15,8 @@ export const SectionTwoColumns = styled.section`
       padding: 2em;
     }
   }
-  p, ul {
+  p,
+  ul {
     margin-bottom: 1em;
   }
   ${({ $postpage }) =>
