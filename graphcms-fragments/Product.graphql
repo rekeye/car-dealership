@@ -28,14 +28,38 @@ fragment Product on Product {
   }
   title
   slug
-  categories {
-    ... on Category {
+  skrzynia_biegow {
+    ... on Skrzynia_biegow {
       remoteTypeName: __typename
       remoteId: id
       locale
       stage
     }
   }
+  typ_nadwozia {
+    ... on Typ_nadwozia {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
+  typ_paliwa {
+    ... on Typ_paliwa {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
+  kolor_nadwozia {
+    ... on Kolor_nadwozia {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }  
   description
   price
   images {
