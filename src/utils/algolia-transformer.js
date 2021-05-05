@@ -3,12 +3,12 @@ const algoliaTransformer = ({
 }) =>
   products.nodes.map(
     ({ 
-        ...product,
         images,
+        ...product
     }) => ({
-        ...product,
-        image: images[0]
+        image: images[0],
+        ...product
     })
-  );
+  )
 
 module.exports = algoliaTransformer;

@@ -1,6 +1,6 @@
 const algoliaQuery = `
   {
-    allGraphCmsProduct {
+    products: allGraphCmsProduct {
       nodes {
         objectID: remoteId
         title
@@ -14,6 +14,18 @@ const algoliaQuery = `
           handle
           height
           width
+        }
+        Kolor_nadwozia {
+          name
+        }
+        Typ_nadwozia {
+          name
+        }
+        Typ_paliwa {
+          name
+        }
+        Skrzynia_biegow {
+          name
         }
       }
     }
