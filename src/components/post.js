@@ -48,7 +48,7 @@ const Post = ({
         <Additional>
           <div>{mileage} km</div>
           <div>{transmissionType}</div>
-          <div>{bodyType.replace("_", " ")}</div>
+          <div>{bodyType.replace('_', ' ')}</div>
         </Additional>
         <Price>{getPriceFormat(price)}</Price>
       </InfoWrapper>
