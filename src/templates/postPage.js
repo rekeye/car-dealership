@@ -97,7 +97,7 @@ const PostPage = ({
         <SectionTwoColumns $postpage>
           {nodes.map(node => (
             <div>
-              <Post key={node.slug} data={node} />
+              <Post key={node.slug} hit={node} />
             </div>
           ))}
         </SectionTwoColumns>
