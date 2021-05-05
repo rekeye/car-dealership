@@ -110,13 +110,7 @@ export const pageQuery = graphql`
   query postPageQuery($id: String!) {
     product: graphCmsProduct(id: { eq: $id }) {
       title
-      description {
-        markdownNode {
-          childMdx {
-            body
-          }
-        }
-      }
+      description
       price
       vin
       mileage

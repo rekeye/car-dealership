@@ -5,7 +5,6 @@ import { SectionTitle, SectionTwoColumns, PostsContainer, StyledLink } from "../
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
-import StyledSearchBackgroundImage from "../components/SearchBackgroundImage"
 import CTAContact from "../components/CTAContact"
 
 
