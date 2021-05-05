@@ -38,7 +38,7 @@ const RedCTA = styled.div`
 `
 
 const Post = ({
-  data: { slug, images, title, mileage, transmissionType, bodyType, price },
+  hit: { slug, images, title, mileage, transmissionType, bodyType, price },
 }) => (
   <StyledLink to={`/oferty/${slug}`}>
     <Container>

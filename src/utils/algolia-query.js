@@ -9,7 +9,6 @@ const algoliaQuery = `
       mileage
       bodyType
       transmissionType
-      fuelType
       images {
         handle
         height
@@ -30,6 +29,6 @@ const algoliaQuery = `
     }
   }
 }
-`;
+`
 
 module.exports = algoliaQuery;

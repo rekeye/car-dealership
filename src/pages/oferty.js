@@ -1,49 +1,30 @@
 import * as React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import algoliasearch from 'algoliasearch/lite'
+import { InstantSearch } from 'react-instantsearch-dom'
+
 import { SectionTitle, PostsContainer } from "../components/styledComponents"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Post from "../components/post"
 import StyledSearchBackgroundImage from "../components/SearchBackgroundImage"
+import CustomHits from "../components/search/CustomHits"
 
-const OffersPage = () => {
-  const {
-    products: { nodes },
-  } = useStaticQuery(pageQuery)
 
-  return (
+const client = algoliasearch(
+  'MK3FSZPUHO',
+  '264b83beb1edff856fbe65bf47dd3c3d'
+)
+
+const OffersPage = () => (
     <Layout>
-      <Seo title="Oferty" />
-      <StyledSearchBackgroundImage/>
-      <SectionTitle $padding>Wszystkie oferty: </SectionTitle>
-      <PostsContainer>
-      {nodes.map(node => (
-        <Post key={node.slug} data={node} />
-      ))}
-      </PostsContainer>
+      <InstantSearch searchClient={client} indexName="car_dealership">
+        <Seo title="Oferty" />
+        <StyledSearchBackgroundImage/>
+        <SectionTitle $padding>Wszystkie oferty: </SectionTitle>
+        <PostsContainer>
+          <CustomHits />
+        </PostsContainer>
+      </InstantSearch>
     </Layout>
   )
-}
-
-export const pageQuery = graphql`
-  {
-    products: allGraphCmsProduct {
-      nodes {
-        title
-        slug
-        price
-        mileage
-        bodyType
-        transmissionType
-        fuelType
-        images {
-          handle
-          height
-          width
-        }
-      }
-    }
-  }
-`
 
 export default OffersPage

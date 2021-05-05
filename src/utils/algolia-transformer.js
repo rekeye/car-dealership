@@ -3,10 +3,8 @@ const algoliaTransformer = ({
 }) =>
   products.nodes.map(
     ({ 
-        images,
         ...product
     }) => ({
-        image: images[0],
         ...product
     })
   )

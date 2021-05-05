@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 import { SectionTitle } from "./styledComponents"
+import SearchFilter from './search/SearchFilter'
 
 const SearchBackgroundImage = ({ className }) => {
   const {
@@ -33,13 +34,13 @@ const SearchBackgroundImage = ({ className }) => {
       <SectionTitle $color="white" $bigger $cta>
         Znajdź swój wymarzony samochód
       </SectionTitle>
-      <p>Miejsce na przyszły formularz szukania</p>
+      <SearchFilter/>
     </BackgroundImage>
   )
 }
 
 const StyledSearchBackgroundImage = styled(SearchBackgroundImage)`
-  height: 40em;
+  height: 35em;
   width: calc(100%+3em);
   margin: 0 -1.5em;
   padding: 2em 1.5em;
