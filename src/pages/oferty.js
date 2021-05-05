@@ -10,8 +10,8 @@ import CustomHits from "../components/search/CustomHits"
 
 
 const client = algoliasearch(
-  process.env.GATSBY_ALGOLIA_APP_ID,
-  process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  process.env.ALGOLIA_APP_ID,
+  process.env.ALGOLIA_SEARCH_KEY
 )
 
 const OffersPage = () => (
