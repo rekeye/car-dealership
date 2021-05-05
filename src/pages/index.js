@@ -20,7 +20,7 @@ const IndexPage = () => {
       <SectionTitle $padding>Najnowsze oferty samochodów:</SectionTitle>
       <PostsContainer>
         {nodes.map(node => (
-          <Post key={node.slug} data={node} />
+          <Post key={node.slug} hit={node} />
         ))}
       </PostsContainer>
 
