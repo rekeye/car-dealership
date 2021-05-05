@@ -96,7 +96,6 @@ export const SectionTitle = styled.h2`
   font-size: ${({ $bigger }) => ($bigger ? "2.2rem" : "1.8rem")};
   text-align: ${({ $cta }) => ($cta ? "center" : "inherit")};
   padding: 0.75em 0;
-  font-weight: 300;
   @media (min-width: 768px) {
     font-size: ${({ $bigger }) => ($bigger ? "2.6rem" : "2.2rem")};
     padding: ${({ $padding }) => ($padding ? "0.75em 0" : "0")};
