@@ -52,7 +52,12 @@ module.exports = {
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries: require("./src/utils/algolia-queries")
+        queries: [
+          {
+            query: require('./src/utils/algolia-query'),
+            transformer: require('./src/utils/algolia-transformer'),
+          },
+        ],
       },
     },
   ],
