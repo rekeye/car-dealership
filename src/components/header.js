@@ -6,6 +6,7 @@ import { useScrollPosition } from "../hooks/useScrollPosition"
 import styled, { css } from "styled-components"
 import { StyledLink } from "./styledComponents"
 
+//#region styled-components
 const HeaderDiv = styled.div`
   background: var(--base-dark-red);
   padding: 1.5em;
@@ -94,6 +95,7 @@ const StickedDiv = styled.div`
   width: 100%;
   height: ${({ sticky }) => (sticky ? "9vh" : "0")};
 `
+//#endregion
 
 const Header = ({ siteTitle }) => {
   const [nav, setNav] = useState(false)

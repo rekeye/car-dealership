@@ -54,8 +54,8 @@ module.exports = {
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         queries: [
           {
-            query: require('./src/utils/algolia-query'),
-            transformer: require('./src/utils/algolia-transformer'),
+            query: require("./src/utils/algolia-query"),
+            transformer: require("./src/utils/algolia-transformer"),
           },
         ],
       },

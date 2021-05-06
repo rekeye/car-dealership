@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 import { SectionTitle } from "./styledComponents"
-import SearchFilter from './search/SearchFilter'
+import SearchFilter from "./search/SearchFilter"
 
 const SearchBackgroundImage = ({ className }) => {
   const {
@@ -34,7 +34,7 @@ const SearchBackgroundImage = ({ className }) => {
       <SectionTitle $color="white" $bigger $cta>
         Znajdź swój wymarzony samochód
       </SectionTitle>
-      <SearchFilter/>
+      <SearchFilter />
     </BackgroundImage>
   )
 }

@@ -1,12 +1,6 @@
-const algoliaTransformer = ({
-  data: { products }
-}) =>
-  products.nodes.map(
-    ({ 
-        ...product
-    }) => ({
-        ...product
-    })
-  )
+const algoliaTransformer = ({ data: { products } }) =>
+  products.nodes.map(({ ...product }) => ({
+    ...product,
+  }))
 
-module.exports = algoliaTransformer;
+module.exports = algoliaTransformer

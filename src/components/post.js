@@ -5,6 +5,7 @@ import { StyledLink, StyledGraphImg } from "./styledComponents"
 import ChevronRight from "../assets/chevron-right.svg"
 import { getPriceFormat } from "../hooks/getPriceFormat"
 
+//#region styled-components
 const Container = styled.div`
   background: #f1f1f1;
 `
@@ -36,9 +37,10 @@ const RedCTA = styled.div`
   justify-content: center;
   gap: 0.4em;
 `
+//#endregion
 
 const Post = ({
-  hit: { slug, images, title, mileage, transmissionType, bodyType, price }
+  hit: { slug, images, title, mileage, transmissionType, bodyType, price },
 }) => (
   <StyledLink to={`/oferty/${slug}`}>
     <Container>
@@ -48,7 +50,7 @@ const Post = ({
         <Additional>
           <div>{mileage} km</div>
           <div>{transmissionType}</div>
-          <div>{bodyType.replace('_', ' ')}</div>
+          <div>{bodyType.replace("_", " ")}</div>
         </Additional>
         <Price>{getPriceFormat(price)}</Price>
       </InfoWrapper>

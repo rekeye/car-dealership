@@ -31,4 +31,4 @@ const algoliaQuery = `
 }
 `
 
-module.exports = algoliaQuery;
+module.exports = algoliaQuery

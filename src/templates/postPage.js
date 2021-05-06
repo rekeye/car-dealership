@@ -50,41 +50,41 @@ const PostPage = ({
         <StyledGraphImg image={images[0]} maxWidth={960} withWebp alt={title} />
       </div>
       <ColumnSpaceBetween>
-      <div>
-        <FlexSpaceBetween>
-          <SectionTitle $bigger $padding>
-            {title}
-          </SectionTitle>
-          <Price>{getPriceFormat(price)}</Price>
-        </FlexSpaceBetween>
-        <SectionTitle>Szczegóły: </SectionTitle>
-        <SectionTwoColumns $postpage>
-          <div>
-            <p>VIN: {vin}</p>
-            <p>Przebieg: {mileage} km</p>
-            <p>Marka: {make}</p>
-            <p>Model: {model}</p>
-            <p>Uszkodzony: {damaged}</p>
-          </div>
-          <div>
-            <p>Typ nadwozia: {bodyType}</p>
-            <p>Kolor nadwozia: {bodyColor}</p>
-            <p>Skrzynia biegów: {transmissionType}</p>
-            <p>Paliwo: {fuelType}</p>
-            <p>Powypadkowy: {notCrashed}</p>
-          </div>
-        </SectionTwoColumns>
-      </div>
-      <div>
-        <StyledLink to="/kontakt" $button $solidcta>
-          {" "}
-          Kontakt w sprawie ogłoszenia <ContactMail />{" "}
-        </StyledLink>
-        <StyledLink to="#"  $button $cta>
-          {" "}
-          Zadzwoń do nas <Contact />{" "}
-        </StyledLink>
-      </div>
+        <div>
+          <FlexSpaceBetween>
+            <SectionTitle $bigger $padding>
+              {title}
+            </SectionTitle>
+            <Price>{getPriceFormat(price)}</Price>
+          </FlexSpaceBetween>
+          <SectionTitle>Szczegóły: </SectionTitle>
+          <SectionTwoColumns $postpage>
+            <div>
+              <p>VIN: {vin}</p>
+              <p>Przebieg: {mileage} km</p>
+              <p>Marka: {make}</p>
+              <p>Model: {model}</p>
+              <p>Uszkodzony: {damaged}</p>
+            </div>
+            <div>
+              <p>Typ nadwozia: {bodyType}</p>
+              <p>Kolor nadwozia: {bodyColor}</p>
+              <p>Skrzynia biegów: {transmissionType}</p>
+              <p>Paliwo: {fuelType}</p>
+              <p>Powypadkowy: {notCrashed}</p>
+            </div>
+          </SectionTwoColumns>
+        </div>
+        <div>
+          <StyledLink to="/kontakt" $button $solidcta>
+            {" "}
+            Kontakt w sprawie ogłoszenia <ContactMail />{" "}
+          </StyledLink>
+          <StyledLink to="#" $button $cta>
+            {" "}
+            Zadzwoń do nas <Contact />{" "}
+          </StyledLink>
+        </div>
       </ColumnSpaceBetween>
     </SectionTwoColumns>
     <SectionTwoColumns $margin $postpage>

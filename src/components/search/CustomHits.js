@@ -1,11 +1,11 @@
-import React from 'react'
-import { connectHits } from 'react-instantsearch-dom'
-import Post from '../post'
+import React from "react"
+import { connectHits } from "react-instantsearch-dom"
+import Post from "../post"
 
 const Hits = ({ hits }) => (
   <>
     {hits.map(hit => (
-      <Post key={hit.objectID} hit={hit}/>
+      <Post key={hit.objectID} hit={hit} />
     ))}
   </>
 )

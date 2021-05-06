@@ -1,12 +1,16 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { SectionTitle, SectionTwoColumns, PostsContainer, StyledLink } from "../components/styledComponents"
+import {
+  SectionTitle,
+  SectionTwoColumns,
+  PostsContainer,
+  StyledLink,
+} from "../components/styledComponents"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/post"
 import CTAContact from "../components/CTAContact"
-
 
 const IndexPage = () => {
   const {
@@ -24,10 +28,12 @@ const IndexPage = () => {
         ))}
       </PostsContainer>
 
-      <StyledLink to="oferty" $button $solidcta>Zobacz wszystkie oferty</StyledLink>
+      <StyledLink to="oferty" $button $solidcta>
+        Zobacz wszystkie oferty
+      </StyledLink>
 
       <SectionTwoColumns $margin>
-        <div style={{padding: '0 1em'}}>
+        <div style={{ padding: "0 1em" }}>
           <SectionTitle $padding>O naszym komisie</SectionTitle>
           <p>
             Nulla sit do laboris commodo. Ad est ad non sint fugiat ea
