@@ -40,7 +40,7 @@ const SearchBackgroundImage = ({ className }) => {
 }
 
 const StyledSearchBackgroundImage = styled(SearchBackgroundImage)`
-  height: 35em;
+  min-height: 35em;
   width: calc(100%+3em);
   margin: 0 -1.5em;
   padding: 2em 1.5em;

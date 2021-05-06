@@ -18,6 +18,7 @@ const SearchCategoriesGrid = styled.div`
     }
     @media(min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
+        gap: 4em;
     }
 `
 const StyledSearchBox = styled(SearchBox)`
@@ -25,6 +26,7 @@ const StyledSearchBox = styled(SearchBox)`
     form {
         background: gainsboro;
         display: flex;
+        align-items: center;
     }
     input {
         background: transparent;
@@ -39,6 +41,39 @@ const StyledSearchBox = styled(SearchBox)`
         background: transparent;
         border: 0;
     }
+    svg {
+        font-size: 0.8rem;
+    }
+`
+const StyledRefinementList = styled(RefinementList)`
+    ul {
+        padding: 1em 0 0 0;
+    }
+    li {
+        list-style: none;
+        padding: 0.2em;
+    }
+    label {
+        display: flex;
+        align-items: center;
+    }
+    input[type='checkbox'] {
+        margin-right: 0.4rem;
+        width: 1.6em;
+        height: 1.6em;
+    }
+    span{
+        font-size: 1.1rem;
+        &:nth-child(3) {
+            font-size: 0.8rem;
+            margin-left: auto;
+        }
+    }
+    @media (min-width: 768px) {
+        ul {
+            padding-left: 1em;
+        }
+    } 
 `
 
 const SearchFilter = () => (
@@ -53,19 +88,19 @@ const SearchFilter = () => (
         <SearchCategoriesGrid>
             <div>
                 <h3>Typ nadwozia</h3>
-                <RefinementList attribute="typ_nadwozia"/>
+                <StyledRefinementList attribute="typ_nadwozia.name"/>
             </div>
             <div>
                 <h3>Kolor nadwozia</h3>
-                <RefinementList attribute="kolor_nadwozia"/>
+                <StyledRefinementList attribute="kolor_nadwozia.name"/>
             </div>
             <div>
                 <h3>Typ paliwa</h3>
-                <RefinementList attribute="typ_paliwa"/>
+                <StyledRefinementList attribute="typ_paliwa.name"/>
             </div>
             <div>
                 <h3>Skrzynia biegów</h3>
-                <RefinementList attribute="skrzynia_biegow"/>
+                <StyledRefinementList attribute="skrzynia_biegow.name"/>
             </div>
         </SearchCategoriesGrid>
     </Container>
