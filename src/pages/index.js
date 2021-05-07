@@ -57,13 +57,6 @@ const IndexPage = () => {
             <li>Dolor consectetur cupidatat id sit.</li>
             <li>Dolor consectetur cupidatat id sit.</li>
           </ul>
-          <p>
-            Occaecat dolore nostrud et velit voluptate commodo deserunt mollit
-            qui Lorem. Aute ad duis aliqua eiusmod velit velit reprehenderit.
-            Amet quis proident eiusmod ut consectetur ea. Minim irure incididunt
-            est cupidatat fugiat ea nostrud aliquip ullamco mollit aute
-            reprehenderit. Nostrud fugiat sunt cupidatat et ullamco.
-          </p>
         </div>
         <StaticImage
           src="../images/hyundai-about.jpg"

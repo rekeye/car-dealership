@@ -1,16 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 import { SectionTitle, StyledLink } from "./styledComponents"
-import ContactSVG from "../assets/contact.svg"
+import ContactMail from "../assets/contact-mail.svg"
 
 const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   font-size: 1.8rem;
   background: var(--white);
-  div {
-    padding: 1em;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    div {
+      &:nth-child(2) {
+        width: 10em;
+      }
+    }
   }
 `
 
@@ -20,9 +26,9 @@ const CTAContact = () => (
       <SectionTitle $cta>Skontaktuj się z nami już teraz!</SectionTitle>
     </div>
     <div>
-      <StyledLink to="/kontakt" $cta $button>
+      <StyledLink to="/kontakt" $solidcta $button>
         Kontakt
-        <ContactSVG />
+        <ContactMail />
       </StyledLink>
     </div>
   </Container>

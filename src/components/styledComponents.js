@@ -8,7 +8,9 @@ export const SectionTwoColumns = styled.section`
   flex-basis: 100%;
   margin: ${({ $margin }) => ($margin ? "3em 0" : "0")};
   > div {
-    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     @media (min-width: 1000px) {
       width: 50%;
@@ -71,9 +73,10 @@ export const StyledLink = styled(Link)`
     css`
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       font-size: 1.4rem;
       padding: 0.75em;
+      width: 100%;
     `}
   ${({ $cta }) =>
     $cta &&
@@ -81,7 +84,6 @@ export const StyledLink = styled(Link)`
       gap: 0.5em;
       border: 3px solid var(--base-dark-red);
       color: var(--base-dark-red);
-      width: 100%;
     `}
   ${({ $solidcta }) =>
     $solidcta &&

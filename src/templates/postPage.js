@@ -57,6 +57,25 @@ const PostPage = ({
             </SectionTitle>
             <Price>{getPriceFormat(price)}</Price>
           </FlexSpaceBetween>
+        </div>
+        <div>
+          <SectionTitle $padding>Opis pojazdu: </SectionTitle>
+          <p>{description}</p>
+        </div>
+        <div>
+          <StyledLink to="/kontakt" $button $solidcta>
+            {" "}
+            Kontakt w sprawie ogłoszenia <ContactMail />{" "}
+          </StyledLink>
+          <StyledLink to="#" $button $cta>
+            {" "}
+            Zadzwoń do nas <Contact />{" "}
+          </StyledLink>
+        </div>
+      </ColumnSpaceBetween>
+    </SectionTwoColumns>
+    <SectionTwoColumns $margin $postpage>
+      <div>
           <SectionTitle>Szczegóły: </SectionTitle>
           <SectionTwoColumns $postpage>
             <div>
@@ -74,23 +93,6 @@ const PostPage = ({
               <p>Powypadkowy: {notCrashed}</p>
             </div>
           </SectionTwoColumns>
-        </div>
-        <div>
-          <StyledLink to="/kontakt" $button $solidcta>
-            {" "}
-            Kontakt w sprawie ogłoszenia <ContactMail />{" "}
-          </StyledLink>
-          <StyledLink to="#" $button $cta>
-            {" "}
-            Zadzwoń do nas <Contact />{" "}
-          </StyledLink>
-        </div>
-      </ColumnSpaceBetween>
-    </SectionTwoColumns>
-    <SectionTwoColumns $margin $postpage>
-      <div>
-        <SectionTitle $padding>Opis pojazdu: </SectionTitle>
-        <p>{description}</p>
       </div>
       <div>
         <SectionTitle $padding>Inne oferty: </SectionTitle>
