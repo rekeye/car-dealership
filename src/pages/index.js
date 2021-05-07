@@ -28,7 +28,7 @@ const IndexPage = () => {
         ))}
       </PostsContainer>
 
-      <StyledLink to="oferty" $button $solidcta>
+      <StyledLink to="oferty" $button $solidcta $center>
         Zobacz wszystkie oferty
       </StyledLink>
 
@@ -57,14 +57,14 @@ const IndexPage = () => {
             <li>Dolor consectetur cupidatat id sit.</li>
             <li>Dolor consectetur cupidatat id sit.</li>
           </ul>
+
+          <CTAContact />
         </div>
         <StaticImage
           src="../images/hyundai-about.jpg"
           alt="zdjęcie samochodu jadącego na autostradzie, na drugim planie widać wzgórza"
         />
       </SectionTwoColumns>
-
-      <CTAContact />
     </Layout>
   )
 }

@@ -6,25 +6,14 @@ import ContactMail from "../assets/contact-mail.svg"
 const Container = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
   font-size: 1.8rem;
-  background: var(--white);
-  @media (min-width: 768px) {
-    flex-direction: row;
-    div {
-      &:nth-child(2) {
-        width: 10em;
-      }
-    }
-  }
+  margin-top: 1.5em;
 `
 
 const CTAContact = () => (
   <Container>
-    <div>
-      <SectionTitle $cta>Skontaktuj się z nami już teraz!</SectionTitle>
-    </div>
+    <SectionTitle>Skontaktuj się z nami już teraz!</SectionTitle>
     <div>
       <StyledLink to="/kontakt" $solidcta $button>
         Kontakt

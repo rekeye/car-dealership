@@ -73,7 +73,7 @@ export const StyledLink = styled(Link)`
     css`
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: ${({$center}) => ($center ? 'center' : 'space-between')};
       font-size: 1.4rem;
       padding: 0.75em;
       width: 100%;
